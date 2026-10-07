@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NETVIZ — Network Topology Visualizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div><h1>NETVIZ</h1><p>Network Topology Visualizer</p></div>
+  <span class="status"><i></i>SYSTEM READY</span>
+</header>
+<div class="layout">
+  <nav class="side" id="nav">
+    <h2>TOPOLOGIES</h2>
+    <button data-t="overview" class="active"><svg viewBox="0 0 20 20"><rect x="2" y="2" width="6" height="6"/><rect x="12" y="2" width="6" height="6"/><rect x="2" y="12" width="6" height="6"/><rect x="12" y="12" width="6" height="6"/></svg>Overview</button>
+    <button data-t="star"><svg viewBox="0 0 20 20"><path d="M10 10L10 2M10 10L18 10M10 10L10 18M10 10L2 10"/><circle cx="10" cy="10" r="2.5"/></svg>Star</button>
+    <button data-t="bus"><svg viewBox="0 0 20 20"><path d="M2 10H18M5 10V4M10 10V16M15 10V4"/></svg>Bus</button>
+    <button data-t="ring"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/></svg>Ring</button>
+    <button data-t="mesh"><svg viewBox="0 0 20 20"><path d="M10 2L18 8L15 18H5L2 8ZM10 2L15 18M10 2L5 18M2 8L15 18M18 8L5 18M2 8H18"/></svg>Mesh</button>
+    <button data-t="tree"><svg viewBox="0 0 20 20"><path d="M10 3V8M4 8H16M4 8V13M16 8V13M2 17H6M14 17H18M4 13V17M16 13V17"/></svg>Tree</button>
+  </nav>
+  <main>
+    <section id="overview" class="view">
+      <h2 class="big">Network Topology Visualizer</h2>
+      <p class="lead">Explore how devices communicate through different network structures.</p>
+      <div class="cards" id="cards"></div>
+    </section>
+    <section id="detail" class="view" hidden>
+      <h2 class="label">NETWORK VISUALIZATION</h2>
+      <div class="panel">
+        <div id="canvas"></div>
+        <div class="controls">
+          <button class="go" id="simBtn">▶ SIMULATE DATA TRANSFER</button>
+          <button class="ghost" id="resetBtn">RESET SIMULATION</button>
+          <span id="msg" class="msg"></span>
+        </div>
+      </div>
+      <div class="stats" id="stats"></div>
+      <div class="info">
+        <h3 id="tName"></h3>
+        <p id="tDesc"></p>
+        <div class="two">
+          <div><h4>Advantages</h4><ul id="tAdv"></ul></div>
+          <div><h4>Applications</h4><ul id="tApp"></ul></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<footer>NETVIZ — Network Topology Visualizer · Computer Networks Project</footer>
+<script src="script.js"></script>
+</body>
+</html>
